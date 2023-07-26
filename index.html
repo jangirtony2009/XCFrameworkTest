@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Ad Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            background-image: url('https://example.com/background-image.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+
+        p {
+            color: #666666;
+        }
+
+        ul {
+            color: #666666;
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            color: #333333;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4285F4;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3669c9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report Ad Listing</h1>
+
+    <p><strong>What are Bad Ads?</strong></p>
+    <p>Bad ads refer to advertisements that violate advertising policies and guidelines set by platforms or regulatory authorities. These ads may contain misleading, inappropriate, or harmful content that can deceive or harm users. It is essential to report bad ads to maintain a safe and trustworthy online environment.</p>
+
+    <p><strong>What to Report:</strong></p>
+    <p>When you encounter an ad that you believe is bad or violates advertising policies, please report it. Here are some instances where reporting an ad is appropriate:</p>
+    <ul>
+        <li><strong>Misleading Content:</strong> Ads that provide false information or intentionally deceive users.</li>
+        <li><strong>Inappropriate Content:</strong> Ads that contain offensive, adult, or sensitive material.</li>
+        <li><strong>Prohibited Items:</strong> Ads promoting products or services that are against platform policies or illegal.</li>
+        <li><strong>Phishing or Scam Ads:</strong> Ads attempting to steal personal information or money fraudulently.</li>
+        <li><strong>Malicious Software:</strong> Ads that lead to sites containing malware or harmful software.</li>
+        <li><strong>Violence or Hate Speech:</strong> Ads promoting violence, discrimination, or hate speech.</li>
+        <li><strong>False Claims:</strong> Ads promising unrealistic results or benefits.</li>
+        <li><strong>Other Concerns:</strong> Any ad that raises concerns or violates the platform's advertising policies.</li>
+    </ul>
+
+    <form id="reportForm">
+        <p>Select the option that best describes the issue:</p>
+        <label for="misleading">
+            <input type="radio" id="misleading" name="reportReason" value="misleading"> Misleading content
+        </label><br>
+        
+        <label for="inappropriate">
+            <input type="radio" id="inappropriate" name="reportReason" value="inappropriate"> Inappropriate content
+        </label><br>
+        
+        <label for="prohibited">
+            <input type="radio" id="prohibited" name="reportReason" value="prohibited"> Prohibited item
+        </label><br>
+        
+        <label for="phishing">
+            <input type="radio" id="phishing" name="reportReason" value="phishing"> Phishing or scam
+        </label><br>
+        
+        <label for="malware">
+            <input type="radio" id="malware" name="reportReason" value="malware"> Malicious software
+        </label><br>
+        
+        <label for="violence">
+            <input type="radio" id="violence" name="reportReason" value="violence"> Violence or hate speech
+        </label><br>
+        
+        <label for="falseclaims">
+            <input type="radio" id="falseclaims" name="reportReason" value="falseclaims"> False claims
+        </label><br>
+        
+        <label for="other">
+            <input type="radio" id="other" name="reportReason" value="other"> Other
+        </label><br>
+
+        <br>
+        <label for="additionalComments">Additional Comments:</label>
+        <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea>
+        <br><br>
+        <input type="submit" value="Send Report">
+    </form>
+</body>
+</html>
