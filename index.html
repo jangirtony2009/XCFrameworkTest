@@ -6,15 +6,16 @@
   <!-- Include Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-  
-  	body {
-    	background-color: #000000;
+    body {
+      background-color: #000000;
     }
+
     /* Custom styles for buttons */
     .custom-btn {
       background-color: #007bff;
       color: #ffffff;
       height: 70px;
+      font-size: 35px;
     }
 
     /* Custom styles for the Google logo and "Powered by Google" label */
@@ -32,7 +33,19 @@
       height: 30px;
       opacity: 0.6; /* Alpha 6 transparency */
       margin-left: 5px; /* Add some space between the text and the logo */
- 
+    }
+
+    /* Custom styles for responsive layout */
+    @media (max-width: 576px) {
+      .custom-btn {
+        height: 60px;
+        font-size: 16px;
+      }
+
+      .google-logo {
+        width: 100px;
+        height: 25px;
+      }
     }
   </style>
 </head>
@@ -51,8 +64,8 @@
         <div class="carousel-item active">
           <h3 class="d-none d-sm-block">Stop seeing this ad and</h3>
           <h5 class="d-block d-sm-none">Stop seeing this ad and</h5>
-          <button class="btn custom-btn mt-3" onclick="showOptions()">Why this ad button</button>
-          <button class="btn custom-btn mt-3 ml-3" onclick="stopSeeingAd()">Stop seeing this ad</button>
+          <button class="btn custom-btn mt-3 btn-block" onclick="showOptions()">Why this ad button</button>
+          <button class="btn custom-btn mt-3 btn-block" onclick="stopSeeingAd()">Stop seeing this ad</button>
         </div>
 
         <!-- Slide 2 -->
@@ -60,15 +73,13 @@
           <h3 class="d-none d-sm-block">Select a reason for not liking the ad</h3>
           <h5 class="d-block d-sm-none">Select a reason for not liking the ad</h5>
           <div id="options">
-            <button class="btn custom-btn mt-3" onclick="selectOption('Ad was inappropriate')">Ad was inappropriate</button>
-            <button class="btn custom-btn mt-3" onclick="selectOption('Seen this ad multiple times')">Seen this ad multiple times</button>
-            <button class="btn custom-btn mt-3" onclick="selectOption('Not interested in the Ad')">Not interested in the Ad</button>
-            <button class="btn custom-btn mt-3" onclick="selectOption('Ad covered content')">Ad covered content</button>
+            <button class="btn custom-btn mt-3 btn-block" onclick="selectOption('Ad was inappropriate')">Ad was inappropriate</button>
+            <button class="btn custom-btn mt-3 btn-block" onclick="selectOption('Seen this ad multiple times')">Seen this ad multiple times</button>
+            <button class="btn custom-btn mt-3 btn-block" onclick="selectOption('Not interested in the Ad')">Not interested in the Ad</button>
+            <button class="btn custom-btn mt-3 btn-block" onclick="selectOption('Ad covered content')">Ad covered content</button>
           </div>
         </div>
       </div>
-
-     
     </div>
   </div>
 
@@ -91,22 +102,21 @@
     // Function to select an option and display a message
     function selectOption(option) {
       // You can customize the action based on the selected option here
-      selectOptionAndSend(option)
+      selectOptionAndSend(option);
     }
 
     // Function to handle "Stop seeing this ad" button click
     function stopSeeingAd() {
-      // You can implement the action for stopping the ad her
-      selectOptionAndSend("Stop seeing this ad")
+      // You can implement the action for stopping the ad here
+      selectOptionAndSend("Stop seeing this ad");
     }
 
- function selectOptionAndSend(option) {
-    // You can customize the action based on the selected option here
-   
+    function selectOptionAndSend(option) {
+      // You can customize the action based on the selected option here
 
-    // Send the selected option to the iOS app
-    window.webkit.messageHandlers.reportAd.postMessage(option);
-  }
+      // Send the selected option to the iOS app
+      window.webkit.messageHandlers.reportAd.postMessage(option);
+    }
   </script>
 </body>
 
