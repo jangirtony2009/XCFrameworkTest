@@ -15,14 +15,16 @@
       background-color: #007bff;
       color: #ffffff;
       height: 70px;
-      font-size: 35px;
+      font-size: 40px;
     }
 
     /* Custom styles for the Google logo and "Powered by Google" label */
+    .h3,
     .powered-by-google {
       display: inline-block;
       opacity: 0.6; /* Alpha 6 transparency */
       color: white;
+      font-size: 40px;
     }
 
     .google-logo {
@@ -54,7 +56,7 @@
   <div class="container mt-5">
     <!-- Powered by Google -->
     <div class="d-flex align-items-center mb-3">
-      <div class="powered-by-google">Powered by</div>
+      <div class="powered-by-google">Protected by</div>
       <div class="google-logo"></div>
     </div>
 
@@ -62,9 +64,7 @@
       <div class="carousel-inner">
         <!-- Slide 1 -->
         <div class="carousel-item active">
-          <h3 class="d-none d-sm-block">Stop seeing this ad and</h3>
-          <h5 class="d-block d-sm-none">Stop seeing this ad and</h5>
-          <button class="btn custom-btn mt-3 btn-block" onclick="showOptions()">Why this ad button</button>
+          <button class="btn custom-btn mt-3 btn-block" onclick="showOptions()">Why this ad?</button>
           <button class="btn custom-btn mt-3 btn-block" onclick="stopSeeingAd()">Stop seeing this ad</button>
         </div>
 
