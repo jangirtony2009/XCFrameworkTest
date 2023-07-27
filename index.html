@@ -115,7 +115,7 @@
         <li><strong>Other Concerns:</strong> Any ad that raises concerns or violates the platform's advertising policies.</li>
     </ul>
 
-    <form id="reportForm">
+    <form id="reportForm" onsubmit="submitForm(event)">
         <p>Select the option that best describes the issue:</p>
         <label for="misleading">
             <input type="radio" id="misleading" name="reportReason" value="misleading"> Misleading content
@@ -155,5 +155,25 @@
         <br><br>
         <input type="submit" value="Send Report">
     </form>
+
+    <script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form data
+        const formData = new FormData(document.getElementById('reportForm'));
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // Convert data to a JSON string
+        const jsonData = JSON.stringify(data);
+
+        // Call a function to send data to the iOS WKWebView
+        window.webkit.messageHandlers.reportAd.postMessage(jsonData);
+    }
+</script>
+
 </body>
 </html>
